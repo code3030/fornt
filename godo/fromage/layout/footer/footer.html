@@ -1,0 +1,85 @@
+{*** 하단 기본타입 | main/index.php ***}
+<div class="content_info_wrap">
+    <div class="foot_list">
+        <div class="foot_list_box">
+            <div class="foot_list_nav">
+                <ul>
+                    <li><a href="../service/company.php">{=__('회사소개')}</a></li>
+                    <li><a href="../service/agreement.php">{=__('이용약관')}</a></li>
+                    <li><a href="../service/private.php">{=__('개인정보처리방침')}</a></li>
+                    <li><a href="../service/guide.php">{=__('이용안내')}</a></li>
+                    <li><a href="../service/cooperation.php">{=__('광고/제휴 문의')}</a></li>
+                </ul>
+            </div>
+            <div class="foot_sci">
+                <ul>
+                    <li><a href="" target="_blank"><img src="/data/main-img/i-s-01.png"></a></li>
+                    <li><a href="" target="_blank"><img src="/data/main-img/i-s-02.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content_info">
+        <div class="cs_center">
+            <h3>CS CENTER</h3>
+            <hr>
+            <p><strong>{gMall.centerPhone}</strong><br>
+            {=nl2br(gMall.centerHours)}</p>
+        </div>
+        <!-- //cs_center -->
+        <!--{ ? !gGlobal.isFront }-->
+        <div class="bank_info">
+            <h3>BANK INFO</h3>
+            <hr>
+            <p>{=__('은행명')} : {gBank.bankName}<br>
+                {=__('예금주')} : {gBank.depositor}<br>
+                {=__('계좌번호')} : {gBank.accountNumber}</p>
+        </div>
+        <!--{/}-->
+        <!-- //bank_info -->
+        <!--{ ? canNotice}-->
+        <div class="notice_list">
+            <h3>ADDRESS</h3>
+            <hr>
+            <p>{=gMall.address}<br>
+                Jahamun-ro, Jongno-gu, Seoul, Republic of korea
+            </p>
+        </div>
+        <!--{/}-->
+        <!-- //notice_list -->
+    </div>
+    <!-- //content_info -->
+</div>
+<!-- //content_info_wrap -->
+
+<div id="footer">
+
+    <!-- //foot_list -->
+    <div class="foot_cont">
+        <div class="foot_logo">
+            <!--{ @dataBanner('2838517793') }-->{.tag}<!--{ / }-->
+        </div>
+        <!-- //foot_logo -->
+        <div class="foot_info">
+            <p>
+                {=gMall.companyNm}&nbsp&nbsp&nbsp{=gMall.address}&nbsp&nbsp&nbsp{=gMall.addressSub}
+                &nbsp&nbsp&nbsp{=__('대표')}&nbsp:&nbsp{=gMall.ceoNm}&nbsp&nbsp&nbsp{=__('사업자등록번호')}&nbsp:&nbsp{=gMall.businessNo}
+                <br>{=__('대표번호')}&nbsp:&nbsp{=gMall.phone}&nbsp&nbsp&nbsp{=__('메일')}&nbsp:&nbsp{=gMall.email}
+            </p>
+        </div>
+        <!-- //foot_info -->
+    </div>
+    <!-- //foot_cont -->
+    <div class="foot_certify">
+        <p>Copyright 2014 “FROMAGE” All Right Reserverd.</p>
+    </div>
+    <!-- //foot_certify -->
+    <!--{ ? isMobileDevice == true }-->
+    <div class="foot_mobile">
+        <p class="btn_center_box">
+            <a href="{=currentPageMobileUri}"><img src="../../img/etc/btn_go_mobile.png"></a>
+        </p>
+    </div>
+    <!--{ / }-->
+</div>
+<!-- //footer -->

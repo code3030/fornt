@@ -1,0 +1,212 @@
+{*** 쇼핑몰 메인본문 | main/index.php ***}
+{ # header }
+
+{=includeWidget('proc/_populate.html', 'sno', '100')}
+<style>
+
+  #header {background:rgba(0,0,0,0.1);}
+  #header .header_top {border-bottom: 1px solid rgba(255,255,255,0.4);}
+  #header .gnb .depth0 > li > a {color:#fff;}
+  #header .top_member_box > li a {color:#fff;}
+
+
+  /* 라이트박스 */
+  .lightBox{display:none; position:fixed; left:0; top:0; width:100%;height:100%; background:rgba(0,0,0,.7); z-index:999;text-align:left;}
+  .lightBox_over {position:fixed; left:0; top:0; width:100%;height:100%; background:rgba(0,0,0,.7); z-index:1000; cursor:pointer;}
+  .lightBox_sub {position:absolute; background:#fff; padding:50px; top:50%; height:auto; max-height:1000px;min-height:300px; width:1260px; left:50%;transform:translate(-50%,-50%);box-sizing: border-box;z-index:2000;overflow:scroll;}
+
+  /* 썸네일 라이트 박스 */
+  .black_overlay{display:none;position:fixed;top:0%;left:0%;width:100%;height:100%;background-color:black;z-index:1001;-moz-opacity:0.8;opacity:.80;filter:alpha(opacity=80)}
+  .white_content{display:none;position:absolute;top:25%;left:25%;width:50%;height:50%;padding:16px;border:16px solid orange;background-color:white;z-index:1002;overflow:auto}
+  .lightBox .lt-it-txt01{padding-left:20px;margin-bottom:40px;color:#000;font-size:24px;font-weight:500;line-height:1.2em;border-left:3px solid#AD8B1A}
+  .lightBox .lt-it-txt02{margin-bottom:75px;color:#404040;font-size:16px;font-weight:400;line-height:1.4em}
+  .lightBox .ltbcbtn{background-color:#103D28;padding:20px 85px;color:#fff;width:16px;font-weight:400;cursor:pointer}
+
+  /* 베스트제품 */
+  .pd-item img {width:auto;height:380px;}
+</style>
+
+
+<div class="main_visual">
+  <!-- ============================= slickSlider ============================================== -->
+  <div class="slick-container">
+    <div class="btn_area">
+      <a href="#" class="btn_prev">
+        <img src="http://eunjuyanolja.godomall.com/data/main-img/slider-arrow-01.png" />
+      </a>
+      <a href="#" class="btn_next">
+        <img src="http://eunjuyanolja.godomall.com/data/main-img/slider-arrow-02.png" />
+      </a>
+    </div>
+
+    <div class="fromageSlider">
+      <div class="slider-st01" style="background-image:url('<!--{ @dataBanner('424544311', true) }-->{.bannerImageUrl}<!--{ / }-->');">
+        <div class="slide-txt-box">
+			<h1></h1>
+			<p></p>
+        </div>
+      </div>
+      <div class="slider-st02" style="background-image:url('<!--{ @dataBanner('1650876327', true) }-->{.bannerImageUrl}<!--{ / }-->');">
+        <div class="slide-txt-box">
+			<h1></h1>
+			<p></p>
+		 </div>
+      </div>
+      <div class="slider-st03" style="background-image:url('<!--{ @dataBanner('1294541833', true) }-->{.bannerImageUrl}<!--{ / }-->');">
+        <div class="slide-txt-box">
+          	<h1></h1>
+			<p></p>
+        </div>
+      </div>
+      <div class="slider-st04" style="background-image:url('<!--{ @dataBanner('4139696150', true) }-->{.bannerImageUrl}<!--{ / }-->');">
+        <div class="slide-txt-box">
+          <h1></h1>
+		  <p></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      var class_name = 'fromageSlider';
+      $('.' + class_name).slick({
+        slidesToShow: 1,
+        arrows: false,
+        prevArrow: $('.' + class_name).parent().find('.btn_area').find('.btn_prev'),
+        nextArrow: $('.' + class_name).parent().find('.btn_area').find('.btn_next'),
+        autoplay: true,
+        speed:1000,
+        autoplaySpeed: 5000,
+        respondTo: 'fromageSlider',
+        adaptiveHeight: true,
+        pauseOnHover:true,
+        dots:true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              slidesToShow: 1,
+              autoplay: true,
+              autoplaySpeed: 3000
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              slidesToShow: 1,
+              autoplay: true,
+              autoplaySpeed: 3000
+            }
+          }
+        ]
+      });
+    });
+  </script>
+  <!-- ============================= /slickSlider ============================================== -->
+
+
+  <!-- ============================= magazine & the cheese ============================================== -->
+	<div class="magazine-con">
+		<div class="magazine-sub-con">
+		<!--{ @getArticles( 'magazine' , 1 , 30 ) }-->
+      		<div class="mgz-col">
+        		<!--{ ? .goodsImageSrc }-->
+          		<div class="mgz-img" style="background-image:url('')">
+            		<a href="/board/list.php?bdId=magazine&active_sno={.sno}" id="thumb_{.sno}" class="ld_btn">
+              			<img src="{.attachImageSrc}">
+            		</a>
+          		</div>
+        		<!--{ / }-->
+          		<div class="mgz-tit">
+            		<h1>
+              			<b>{.subject}</b>
+              			<br>
+              			<span><!--등록일-->{.regDate}</span>
+            		</h1>
+          		</div>
+      		</div>
+    		<!--{ / }-->
+			
+			
+  		</div>
+		
+		<div class="cheese-sub-con">
+			<div class="cheese-row">
+	      		<!--{ @getArticles( 'THECHEESE' , 4 , 30 ) }-->
+	      		<div class="cheese-col">
+					<!--{ ? .goodsImageSrc }-->
+					<div class="mgz-img" style="background-image:url('')">
+						<a href="/board/list.php?bdId=THECHEESE&active_sno={.sno}" id="thumb_{.sno}" class="ld_btn">
+							<img src="{.attachImageSrc}">
+						</a>
+					</div>
+					<!--{ / }-->
+					<div class="mgz-tit">
+						<h1>
+							<b>{.subject}</b>
+							<br>
+							<span><!--등록일-->{.regDate}</span>
+						</h1>
+					</div>
+				</div>
+	    		<!--{ / }-->
+			</div>
+  		</div>
+	</div>
+  <!-- ============================= /magazine ============================================== -->	
+	
+
+  <!-- ============================= cheeseClass ============================================== -->
+  <div class="cheese-class-con" style="background-image:url('<!--{ @dataBanner('1317624213', true) }-->{.bannerImageUrl}<!--{ / }-->');">
+    <div class="chs-txt-box">
+      <h1>FROMAGE Cheese class</h1>
+      <p>치즈에 대한 기본적인 이해를 도와주는  클래스부터<br>
+        전문과정 치즈클래스까지 프로마쥬가 함께 합니다.</p>
+      <a href="../main/html.php?htmid=cheese_class/cheese_class.html" class="sm-link sm-link_bg sm-link12"><span class="sm-link__label">자세히보기</span></a>
+    </div>
+  </div>
+  <!-- ============================= /cheeseClass ============================================== -->
+
+  <!-- ============================= product ============================================== -->
+  <div class="pd-con">
+    <h1>BEST PRODUCT</h1>
+    <div class="pd-item">
+      {=includeWidget('goods/_goods_display_main.html','sno','1')}
+    </div>
+  </div>
+  <!-- ============================= /product ============================================== -->
+
+
+  <!-- ============================= banner ============================================== -->
+  <div class="bn-con">
+    <div class="bn-sub-con">
+      <div class="bn-col" OnClick="location.href ='../board/list.php?bdId=fevent'" style="cursor:pointer;">
+        <div class="bn-sub-col-01">
+          <h1>5월 치즈클래스 플러스 혜택</h1>
+          <p>5월 한달 치즈클래스 신청자에 한하여 치즈상품 할인혜택</p>
+        </div>
+        <div class="bn-sub-col-02">
+          <img src="/data/main-img/i-01.png">
+        </div>
+      </div>
+      <div class="bn-col" OnClick="location.href ='../board/list.php?bdId=fevent'" style="cursor:pointer;">
+        <div class="bn-sub-col-01">
+          <h1>프로마쥬 무료배송 이벤트</h1>
+          <p>프로마쥬 무료배송 혜택을 만나보세요.</p>
+        </div>
+        <div class="bn-sub-col-02">
+          <img src="/data/main-img/i-02.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================= /banner ============================================== -->
+</div>
+
+
+{ # footer }

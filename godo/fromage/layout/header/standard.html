@@ -1,0 +1,192 @@
+{*** 상단 기본파일 | main/index.php ***}
+<style>
+	.header {
+		position: relative;
+		z-index: 1001;
+	}
+    #header{
+        position:absolute;
+        top:30px;
+        left:0;
+        width:100%;
+		background-color: #fff;
+        z-index:1000;
+    }
+    .header {background: rgba(0,0,0,0.1);}
+    /* companyNav */
+    .cp-nav {width:100%; height:50px; margin-bottom:50px; background-color:#F4F4F4;}
+    .cp-nav ul {display:table;width:1260px;height:100%; margin:auto;}
+    .cp-nav ul li a {display:block;width:100%;height:100%;padding:0;color:#000;font-size:16px;font-weight:400;line-height: 41px;border-top:4px solid #F4F4F4;transition:all ease 0.3s;}
+    .cp-nav ul li a:hover {color:#AD8B1A;border-top:4px solid #AD8B1A;}
+    .cp-nav ul li.active a {color:#AD8B1A;}
+
+</style>
+<link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick.css" />
+<script type="text/javascript" src="https://kenwheeler.github.io/slick/slick/slick.min.js"></script>
+<SCRIPT TYPE="text/javascript">
+    jQuery(document).ready(function($){
+        var didScroll;
+        var lastScrollTop = 0; var delta = 5; var navbarHeight = $('header').outerHeight();
+
+        $(window).scroll(function(event){
+            if($(window).scrollTop() > 30){
+                $("#header").addClass('shrink');
+            }else{
+                $("#header").removeClass('shrink');
+            }
+        });
+    });
+</SCRIPT>
+
+<div class="header">
+<div class="header_top">
+    <div class="header_top_cont">
+        <!-- 멀티상점 선택 -->
+        {=includeWidget('proc/_global_select.html')}
+        <!-- 멀티상점 선택 -->
+
+        <ul class="top_member_box">
+            <!--{ ? gd_is_login() === false }-->
+            <li><a href="../member/join_method.php">JOIN</a><span class="txt_bar"></span>
+                <!--<span class="accent">
+                    <span><strong>2,000 P</strong></span>
+                </span>-->
+            </li>
+            <li><a href="../member/login.php">LOGIN</a><span class="txt_bar"></span></li>
+
+            <!--{ : }-->
+            <li><a href="../member/logout.php?returnUrl={=logoutReturnUrl}">LOGOUT</a><span class="txt_bar"></span></li>
+            <!--{ / }-->
+            <li><a href="../order/cart.php">{=__('ORDER')}( <strong>{=dataCartGoodsCnt()}</strong> )</a><span class="txt_bar"></span></li>
+            <li>
+                <div class="top_mypage_cont">
+                    <span class="top_mypage_tit"><a href="../mypage/index.php">MYPAGE</a></span>
+                    <ul style="display:none;">
+                        <li><a href="../mypage/order_list.php">{=__('주문조회')}</a></li>
+                        <li><a href="../mypage/my_page_password.php">{=__('내정보수정')}</a></li>
+                        <li><a href="../mypage/wish_list.php">{=__('찜 리스트')}</a></li>
+                        <li><a href="../mypage/mypage_qa.php">1:1 {=__('문의')}</a></li>
+                    </ul>
+                </div>
+                <span class="txt_bar"></span>
+            </li>
+
+            <!-- <li><a href="../service/index.php">{=__('고객센터')}</a></li> -->
+        </ul>
+
+    </div>
+    <!-- //header_top_cont -->
+</div>
+</div>
+<!-- //header_search -->
+
+
+
+
+<div id="header">
+
+    <div class="header_gnb depth0">
+		<div class="gnb_logo">
+            <!--{ @dataBanner('4238483832') }-->{.tag}<!--{ / }-->
+		</div>
+        <div class="gnb_logo_ch">
+            <a href="http://eunjuyanolja.godomall.com/">
+                <img src="/data/main-img/chg_logo.png">
+            </a>
+        </div>
+
+        <div class="gnb">
+
+            <ul class="depth0 gnb_menu0" style="overflow: visible; height: 100%;">
+            <!-- 전체 카테고리 출력 레이어 시작 -->
+
+            <!-- 전체 카테고리 출력 레이어 끝 -->
+            <li <!--{ ? gThisPageName == "company.php"}--> class="active"<!--{ / }-->
+                <!--{ ? gThisPageName == "plan-operation.php"}--> class="active"<!--{ / }-->
+                <!--{ ? gThisPageName == "onlineshop.php"}--> class="active"<!--{ / }-->
+                ><a href="../service/company.php">ABOUT</a>
+                <ul class="depth1" style="display: none;">
+                    <li <!--{ ? gThisPageName == "company.php"}--> class="active"<!--{ / }-->>
+                    <a href="../service/company.php">미디어/교육</a>
+                    </li>
+                    <li <!--{ ? gThisPageName == "plan-operation.php"}--> class="active"<!--{ / }-->>
+                    <a href="/main/html.php?htmid=service/plan-operation.html">행사기획/운영</a>
+                    </li>
+                    <li <!--{ ? gThisPageName == "onlineshop.php"}--> class="active"<!--{ / }-->>
+                    <a href="/main/html.php?htmid=service/onlineshop.html">온라인</a>
+                    </li>
+                </ul>
+            </li>
+            <li
+                <!--{ ? gThisPageName == "cheese_class.php"}--> class="active"<!--{ / }-->
+                <!--{ ? gThisPageName == "cheese_101.php"}--> class="active"<!--{ / }-->
+                <!--{ ? gThisPageName == "cheese_type.php"}--> class="active"<!--{ / }-->
+                <!--{ ? gThisPageName == "cheese_plate.php"}--> class="active"<!--{ / }-->
+            ><a href="../main/html.php?htmid=cheese_class/cheese_class.html">CLASS</a>
+                <ul class="depth1" style="display: none;">
+                    <li <!--{ ? gThisPageName == "cheese_101.php"}--> class="active"<!--{ / }-->>
+                        <a href="../main/html.php?htmid=cheese_class/cheese_101.html">치즈101</a>
+                    </li>
+                    <li <!--{ ? gThisPageName == "cheese_type.php"}--> class="active"<!--{ / }-->>
+                        <a href="../main/html.php?htmid=cheese_class/cheese_type.html">분류별치즈</a>
+                    </li>
+                    <li <!--{ ? gThisPageName == "cheese_plate.php"}--> class="active"<!--{ / }-->>
+                        <a href="../main/html.php?htmid=cheese_class/cheese_plate.html">치즈플레이트</a>
+                    </li>
+                </ul>
+            </li>
+            <li
+                <!--{ ? gd_get("bdId") == "magazine"}--> class="active"<!--{ / }-->
+                <!--{ ? gd_get("bdId") == "THECHEESE"}--> class="active"<!--{ / }-->
+                <!--{ ? gd_get("bdId") == "CHEESEGUIDE"}--> class="active"<!--{ / }-->
+
+                ><a href="../board/list.php?bdId=magazine">CONTENTS</a>
+                <ul class="depth1" style="display: none;">
+                    <li <!--{ ? gd_get("bdId") == "magazine"}--> class="active"<!--{ / }-->>
+                    <a href="../board/list.php?bdId=magazine">MAGAZINE</a>
+                    </li>
+                    <li <!--{ ? gd_get("bdId") == "THECHEESE"}--> class="active"<!--{ / }-->>
+                    <a href="../board/list.php?bdId=THECHEESE">THE CHEESE</a>
+                    </li>
+                    <li <!--{ ? gd_get("bdId") == "CHEESEGUIDE"}--> class="active"<!--{ / }-->>
+                    <a href="../board/list.php?bdId=CHEESEGUIDE">CHEESE GUIDE</a>
+                    </li>
+                </ul>
+            </li>
+            <li <!--{ ? gd_get("bdId") == "fevent2"}--> class="active"<!--{ / }-->
+                <!--{ ? gd_get("bdId") == "fevent"}--> class="active"<!--{ / }-->>
+                <a href="/board/list.php?bdId=fevent">NEWS</a>
+				<ul class="depth1" style="display: none;">
+					<li<!--{ ? gd_get("bdId") == "fevent2"}--> class="active"<!--{ / }-->>
+					<a href="/board/list.php?bdId=fevent2">행사</a>
+					</li>
+					<li<!--{ ? gd_get("bdId") == "fevent"}--> class="active"<!--{ / }-->>
+					<a href="/board/list.php?bdId=fevent">이벤트</a>
+					</li>
+				</ul>
+            </li>
+            <!-- 상단 카테고리 출력 끝 -->
+            <li <!--{ ? gThisPageName == "shop.php"}--> class="active"<!--{ / }-->
+                <!--{ ? gd_get("htmid") == "goods/shop.html"}--> class="active"<!--{ / }-->
+                <!--{ ? substr(gd_get("cateCd"),0,1) == "0"}--> class="active"<!--{ / }-->
+                <!--{ ? substr(gd_get("goodsNo"),0,1) == "1"}--> class="active"<!--{ / }-->>
+                <a href="../main/html.php?htmid=goods/shop.html" class="">SHOP</a>
+                <ul class="depth1" style="display: none;">
+                    <li<!--{ ? substr(gd_get("cateCd"),0,3) == "001"}--> class="active"<!--{ / }-->><a href="/goods/goods_list.php?cateCd=001">치즈</a></li>
+                    <li<!--{ ? gd_get("cateCd") == "002"}--> class="active"<!--{ / }-->><a href="/goods/goods_list.php?cateCd=002">치즈친구</a></li>
+                    <li<!--{ ? gd_get("cateCd") == "003"}--> class="active"<!--{ / }-->><a href="/goods/goods_list.php?cateCd=003">치즈도구</a></li>
+                    <li<!--{ ? gd_get("cateCd") == "004"}--> class="active"<!--{ / }-->><a href="/goods/goods_list.php?cateCd=004">세트상품</a></li>
+                    <li<!--{ ? gd_get("cateCd") == "005"}--> class="active"<!--{ / }-->><a href="/goods/goods_list.php?cateCd=005">정기배송</a></li>
+                    <li<!--{ ? gd_get("cateCd") == "006"}--> class="active"<!--{ / }-->><a href="/goods/goods_list.php?cateCd=006">치즈클래스</a></li>
+                    <!-- {=includeWidget('proc/category_side', 'type', 'top','cateType','cate','menuType','all')} -->
+                </ul>
+            </li>
+            </ul>
+        </div>
+        <!-- //gnb -->
+
+        <!-- //gnb_allmenu -->
+    </div>
+    <!-- //header_gnb -->
+</div>
+<!-- //header -->

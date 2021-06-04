@@ -1,0 +1,34 @@
+{*** 상단 기본파일 | outline/header/subShop.php ***}
+
+{=includeFile('outline/header/standard.html')}
+
+<style>
+    .header .header_top {background-color:#fff;}
+    .header .top_member_box > li > a {color:#000}
+    .top_member_box > li a {color:#000}
+    .header .header_top {border-bottom:1px solid #eee;}
+
+	/* 상단 이미지 */
+    .chc-bg {width:100%;height:264px;background-size:cover; background-position:center; background-repeat:no-repeat;}
+    .shContent {width:1260px;margin:0 auto 150px auto;}
+
+    /* 샾 네비 */
+    .cp-nav ul li {display:table-cell;width:14.285714%;height:100%;text-align:center;transition:all ease 0.3s;}
+</style>
+
+<div style="height:109px;"> </div>
+<!-- mainBackground  -->
+<div class="chc-bg" style=" background-image:url('<!--{ @dataBanner('1838840427', true) }-->{.bannerImageUrl}<!--{ / }-->');">
+</div>
+<!-- subMenu -->
+<div class="cp-nav">
+    <ul>
+        <li<!--{ ? gd_get("htmid") == "goods/shop.html"}--> class="active"<!--{ / }-->><a href="/main/html.php?htmid=goods/shop.html">전체</a></li>
+        <li<!--{ ? substr(gd_get("cateCd"),0,3) == "001"}--> class="active"<!--{ / }-->><a href="/goods/goods_list.php?cateCd=001">치즈</a></li>
+        <li<!--{ ? gd_get("cateCd") == "002"}--> class="active"<!--{ / }-->><a href="/goods/goods_list.php?cateCd=002">치즈친구</a></li>
+		<li<!--{ ? gd_get("cateCd") == "003"}--> class="active"<!--{ / }-->><a href="/goods/goods_list.php?cateCd=003">치즈도구</a></li>
+		<li<!--{ ? gd_get("cateCd") == "004"}--> class="active"<!--{ / }-->><a href="/goods/goods_list.php?cateCd=004">세트상품</a></li>
+		<li<!--{ ? gd_get("cateCd") == "005"}--> class="active"<!--{ / }-->><a href="/goods/goods_list.php?cateCd=005">정기배송</a></li>
+		<li<!--{ ? gd_get("cateCd") == "006"}--> class="active"<!--{ / }-->><a href="/goods/goods_list.php?cateCd=006">치즈클래스</a></li>
+    </ul>
+</div>

@@ -1,0 +1,23 @@
+{*** 상단 기본파일 | main/index.php ***}
+
+{=includeFile('outline/header/standard.html')}
+<style>
+    .header .header_top {background-color:#fff;}
+    .header .top_member_box > li > a {color:#000;}
+    .top_member_box > li a {color:#000;}
+    .header .header_top {border-bottom:1px solid #eee;}
+</style>
+
+<div style="height:109px;"> </div>
+<!-- mainBackground  -->
+<div class="chc-bg" style=" background-image:url('<!--{ @dataBanner('701821562', true) }-->{.bannerImageUrl}<!--{ / }-->');">
+</div>
+
+<!-- subMenu -->
+<div class="cp-nav">
+    <ul>
+        <li<!--{ ? gThisPageName == "company.php"}--> class="active"<!--{ / }-->><a href="/service/company.php">미디어/교육</a></li>
+        <li<!--{ ? gThisPageName == "plan-operation.php"}--> class="active"<!--{ / }-->><a href="/main/html.php?htmid=service/plan-operation.html">행사기획/운영</a></li>
+        <li<!--{ ? gThisPageName == "onlineshop.php"}--> class="active"<!--{ / }-->><a href="/main/html.php?htmid=service/onlineshop.html">온라인샵</a></li>
+    </ul>
+</div>
