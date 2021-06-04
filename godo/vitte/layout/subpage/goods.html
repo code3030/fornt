@@ -1,0 +1,70 @@
+{*** 상품 리스트 | goods/goods_list.php ***}
+{ # header }
+
+<!-- visual wrap -->
+<div class="main-visual-wrap mb-126 product-visual-wrap" style="background-image: url('<!--{ @dataBanner('2702792576', true) }-->{.bannerImageUrl}<!--{ / }-->')">
+</div>
+<!-- // visual wrap -->
+
+<!-- goods_list_item -->
+<div class="content mw">
+	<!-- category item nav -->
+	<div class="prdt-col prdt-col-3">
+		<nav class="item-nav">
+			<ul>
+				<li <!--{ ? gd_get("cateCd") == "001"}--> class="on"<!--{ / }-->>
+					<a href="/goods/goods_list.php?cateCd=001">all</a>
+				</li>
+				<!--{ @ dataSubCategory( cateCd,cateType ) }-->
+				<li class="<!--{ ? cateCd == .cateCd }-->on<!--{ / }-->">
+					<a href="?{cateType}Cd={.cateCd}">
+						<span>{.cateNm} <!--{ ? naviDisplay.naviCount =='y' }--><em>({.goodsCnt+0})</em><!--{ / }--></span>
+					</a>
+				</li>
+				<!--{ / }-->
+			</ul>
+		</nav>
+	</div>
+	<!-- // category item nav -->
+	
+	<!-- list -->
+	<div class="prdt-col prdt-col-9">
+		<div class="goods_list">
+			<div class="goods_list_cont goods_custom_css">
+				<!-- 상품 리스트 -->
+				<!--{ # goodsTemplate }-->
+				<!-- //상품 리스트 -->
+			</div>
+		</div>
+		
+		<div class="pagination page_custom">
+			{page->getPage()}
+		</div>
+	</div>		
+	<!-- // list -->
+</div>
+<!-- //goods_list_item -->
+	
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			$('form[name=frmList] select[name=pageNum]').change(function() {
+				$('form[name=frmList]').get(0).submit();
+			});
+
+			$('form[name=frmList] input[name=sort]').click(function() {
+				$('form[name=frmList]').get(0).submit();
+			});
+
+			$(':radio[name="sort"][value="{sort}"]').prop("checked","checked")
+			$(':radio[name="sort"][value="{sort}"]').next().addClass('on');
+
+			$('#container').css('max-width', 'unset')
+		});
+	</script>
+</div>
+<!-- //content -->
+
+{ # footer }

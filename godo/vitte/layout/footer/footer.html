@@ -1,0 +1,37 @@
+{*** 하단 기본타입 | main/index.php ***}
+
+<!-- footer -->
+<div class="footer-wrap">
+	<div class="footer-col-8">
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="https://www.instagram.com/_sz_o_sz_/">피티스튜디오 인스타그램</a></li>
+				<li><a href="https://www.instagram.com/vitte_official_/">븨떼 인스타그램</a></li>
+				<li><a href="../service/private.php">개인정보처리방침</a></li>
+				<li><a href="/service/notice.php">고객센터</a></li>
+				<li><a href="../service/agreement.php">이용약관</a></li>
+			</ul>
+		</nav>
+		<p class="footer-info">
+			<span>회사명 : {=gMall.companyNm} </span>
+			<span>대표이사 : {=gMall.ceoNm} </span>
+			<span>주소 : 븨떼 : {=gMall.address} {=gMall.addressSub} </span>
+			<span>대표번호 : {=gMall.phone}</span>
+		</p>
+		<p class="footer-info mb-32">
+			<span>통신판매업신고 : {=gMall.onlineOrderSerial} </span>
+			<span>사업자등록번호 : {=gMall.businessNo} </span>
+			<span>개인정보관리책임자 : {=gMall.ceoNm} </span>
+			<span>E-MAIL <a href="mailto:{=gMall.email}" class="btn_email">{=gMall.email}</a></span>
+		</p>
+		<p>COPYRIGHT © 2021 FVITTE. ALL RIGHTS RESERVED. HOSTING BY NHN GODO.</p>
+	</div>
+	<div class="footer-col-4">
+		<div class="footer-contact">
+			<h3>븨떼 고객센터</h3>
+			<a href="tel:{=gMall.phone}">{=gMall.phone}</a>
+			<p>{=nl2br(gMall.centerHours)}</p>
+		</div>
+	</div>
+</div>
+<!-- // foote -->

@@ -1,0 +1,62 @@
+{*** 쇼핑몰 메인본문 | main/index.php ***}
+{ # header }
+
+<!-- main contents -->
+<!-- visual wrap -->
+<div class="main-visual-wrap mb-60" style="background-image: url('<!--{ @dataBanner('1164047317', true) }-->{.bannerImageUrl}<!--{ / }-->')">
+	<div class="mw">
+		<div class="main-visual-box">
+			<h2 class="fr">physical<br>project</h2>
+		</div>
+	</div>
+</div>
+<!-- // visual wrap -->
+
+<!-- Physical project -->
+<div class="main-info-wrap mw mb-139">
+	<div class="physical-txt txt-ct mb-139">
+		<h2 class="main-sub-tit mb-32 fr">Physical project</h2>
+		<p>FITT 운동검사는 운동과학 데이터를 기반으로 개인별 몸 상태를 과학적으로 진단합니다.<br>
+		FITT 측정평가사 정식 자격을 갖춘 PHYSICAL PFOJECT 트레이너는 운동의<br> 
+		빈도, 강도, 시간, 형태에 맞게 가장 효과적인 운동 처방을 제시합니다.</p>
+	</div>
+
+	<div class="main-ad-wrap">
+		<div class="main-pt">
+			<h2 class="main-sub-tit mb-11 fr">Pt studio</h2>
+			<div class="main-sub-wrap">
+				<div class="main-pt-bg">
+					<img src="/data/img/m-02.png" class="bg wh">
+					<a href="/goods/goods_list.php?cateCd=001" class="main-sub-tit fr">more view</a>
+				</div>
+				<img src="/data/img/pt_img.png" class="main-pt-bg-txt">
+			</div>
+		</div>
+
+		<div class="main-ad">
+			<h2 class="main-sub-tit mb-11 fr">Fvitte shop</h2>
+			<div class="main-sub-wrap">
+				<div class="main-ad-bg">
+					<img src="/data/img/m-03.png" class="bg wh">
+					<a href="/board/list.php?bdId=VITTE" class="main-sub-tit fr">more view</a>
+				</div>
+				<img src="/data/img/vitte_img.png" class="main-ad-bg-txt">
+			</div>
+		</div>
+	</div>
+
+	<div class="main-inst-wrap">
+		<h2 class="main-sub-tit mb-32 txt-ct fr">instargram</h2>
+		<div class="main-inst-row">
+			<h3 class="fr">Pt studio</h3>
+			{=includeWidget('proc/_insgov2.html', 'sno', '1')}
+		</div>
+	</div>
+</div>
+<!-- // Physical project -->
+
+<script>
+	$('#container').css('max-width', 'unset')
+</script>
+
+{ # footer }
