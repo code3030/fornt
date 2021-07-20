@@ -1,0 +1,189 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/main.css" />
+    <!-- Main Mobile  -->
+    <link rel="stylesheet" href="./assets/main_mo.css" />
+</head>
+
+<body>
+
+<!-- <div class="menu-wrap"> -->
+    <!-- right navigator -->
+    <div class="rightBar glass">
+        <!-- hambug -->
+        <button type="button" id="hamBtn" class="hambugMenu">
+            <div class="lines">
+                <span class="hambug-bar line01"></span>
+                <span class="hambug-bar line02"></span>
+                <span class="hambug-bar line03"></span>
+            </div>
+            <span class="text">MENU</span>
+        </button>
+        <!-- // hambug -->
+
+        <!-- lang -->
+        <ul class="langBtn">
+            <li><a href="/#" class="on">KR</a></li>
+            <li><a href="/#">EN</a></li>
+        </ul>
+        <!-- // lang -->
+
+        <!-- kakaoBtn -->
+        <button type="button" class="talk">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31">
+                    <g fill="none" fill-rule="evenodd">
+                        <g fill="#1B1B1B" fill-rule="nonzero">
+                            <g>
+                              <path d="M15.07 0c-.009.008-.025.008-.05.008C6.737.008 0 6.748 0 15.036c0 3.382 1.154 6.666 3.266 9.312L1.08 29.425c-.18.418.017.9.426 1.073.147.065.311.082.467.057l8.013-1.408c1.605.581 3.29.876 4.994.868 8.283 0 15.02-6.74 15.02-15.028C30.016 6.724 23.329.008 15.07 0zm-.082 28.385c-1.58 0-3.144-.287-4.625-.844-.14-.057-.287-.065-.434-.04L3.184 28.68l1.785-4.152c.122-.287.073-.623-.131-.86-.966-1.122-1.736-2.4-2.276-3.784-.606-1.548-.917-3.194-.917-4.856 0-7.387 6.008-13.39 13.384-13.39 7.358-.016 13.334 5.937 13.342 13.3v.049c0 7.395-6.008 13.398-13.383 13.398z" transform="translate(-1369 -652) translate(1369 652)"></path>
+                              <path d="M14.197 11.887H9.86c-.442 0-.803.382-.803.849 0 .467.361.849.803.849h4.337c.442 0 .803-.382.803-.85 0-.466-.361-.848-.803-.848zM20.118 16.132H9.882c-.454 0-.825.382-.825.85 0 .466.371.848.825.848h10.236c.454 0 .825-.382.825-.849 0-.467-.371-.849-.825-.849z" transform="translate(-1369 -652) translate(1369 652)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </span>
+            <span class="text"><i>TALK</i></span>
+        </button>
+        <!-- // kakaoBtn -->
+
+        <!-- contact -->
+        <button type="button" class="email">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20">
+                    <path fill="#1B1B1B" d="M23.715 0H2.285C1.027 0 0 1.028 0 2.29v15.263c0 1.257 1.022 2.29 2.285 2.29h21.43c1.255 0 2.285-1.025 2.285-2.29V2.289C26 1.032 24.978 0 23.715 0zm-.316 1.526l-10.35 10.37-10.44-10.37h20.79zM1.523 17.236V2.599L8.86 9.886l-7.337 7.35zm1.078 1.08l7.341-7.356 2.573 2.556c.297.295.778.294 1.074-.003L16.098 11l7.301 7.316H2.601zm21.876-1.08l-7.302-7.315 7.302-7.315v14.63z"></path>
+                </svg>
+            </span>
+            <span class="text"><i>CONTACT</i></span>
+        </button>
+        <!-- // contact -->
+    </div>
+    <!-- // right navigator -->
+
+    <!-- gnb -->
+    <div class="gnb">
+        <div class="bgGnb"></div>
+        <div class="menu-list">
+            <div class="cover">
+            </div>
+
+            <div class="bgImg">
+                <span class="bg">
+                    <img src="./assets/img/img-gnb-cate01.jpg" alt="">
+                </span>
+                <span class="bg">
+                    <img src="./assets/img/img-gnb-cate02.jpg" alt="">
+                </span>
+                <span class="bg">
+                    <img src="./assets/img/img-gnb-cate03.jpg" alt="">
+                </span>
+                <span class="bg">
+                    <img src="./assets/img/img-gnb-cate04.jpg" alt="">
+                </span>
+                <span class="bg">
+                    <img src="./assets/img/img-gnb-cate05.jpg" alt="">
+                </span>
+                <span class="bg">
+                    <img src="./assets/img/img-gnb-cate06.jpg" alt="">
+                </span>
+            </div>
+
+            <div class="menu-list-inner">
+                <div class="menu-category" data-idx="1">
+                    <h2>LX인터내셔널</h2>
+                    <ul>
+                       <li><a href="/#">회사소개</a></li>
+                       <li><a href="/#">비전</a></li>
+                       <li><a href="/#">정도경영</a></li>
+                       <li><a href="/#">글로벌 네트워크</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-category" data-idx="2">
+                    <h2>투자정보</h2>
+                     <ul>
+                       <li><a href="/#">주식정보</a></li>
+                       <li><a href="/#">재무정보</a></li>
+                       <li><a href="/#">IR 참고정보</a></li>
+                       <li><a href="/#">공시정보</a></li>
+                     </ul>
+                </div>
+
+                <div class="menu-category" data-idx="3">
+                 <h2><a href="/#">사업소개</a></h2>
+                 
+                </div>
+                <div class="menu-category" data-idx="4">
+                    <h2><a href="/#">채용정보</a></h2>
+                </div>
+                <div class="menu-category" data-idx="5">
+                    <h2>LXI 뉴스룸</h2>
+                    <ul>
+                       <li><a href="/#">Press Room</a></li>
+                       <li><a href="/#">LXI Webzine</a></li>
+                       <li><a href="/#">자료실</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-category" data-idx="6">
+                    <h2><button type="button" class="gnb_email">문의하기</button></h2>
+                </div>
+            </div>
+
+            <div class="terms-link mo-hide">
+                <a href="/#" target="_blank"><strong>개인정보처리방침</strong></a>
+                <a href="/#" target="_blank">이메일무단수집거부</a>
+                <a href="/#" target="_blank">정도경영 사이버 신문고</a>
+            </div>
+        </div>
+
+        <button type="button" class="btn-close close-gnb">닫기</button>
+
+        <div class="companyInfo">
+            <div class="cover"></div>
+            <div class="companyInfo-inner">
+                <div class="sns-link">
+                    <a href="/#" target="_blank" class="sns-blog">
+                        <img src="./assets/img/ico-sns-blog.png" alt="기업블로그">
+                    </a>
+                    <a href="/#" target="_blank" class="sns-youtube">
+                        <img src="./assets/img/ico-sns-youtube.png" alt="유튜브">
+                    </a>
+                    <a href="/#" target="_blank" class="sns-insta">
+                        <img src="./assets/img/ico-sns-insta.png" alt="인스타그램">
+                    </a>
+                    <a href="/#" target="_blank" class="sns-facebook">
+                        <img src="./assets/img/ico-sns-facebook.png" alt="페이스북">
+                    </a>
+                    <a href="/#" target="_blank" class="sns-post">
+                        <img src="./assets/img/ico-sns-post.png" alt="포스트">
+                    </a>
+                </div>
+
+                <address class="info">
+                    <p class="tel">대표번호<strong>02-6924-3114</strong></p>
+                    <p class="ceo">대표이사 : 윤춘성</p>
+                    <p class="addr">(03184) 서울특별시 종로구 새문안로 58 LX인터내셔널</p>
+                    <p class="copyright">COPYRIGHT©2020 BY LX International Corp.</p>
+                </address>
+            </div>
+        </div>
+        <div class="terms-link mo-show">
+            <a href="/#" target="_blank"><strong>개인정보처리방침</strong></a>
+            <a href="/#" target="_blank">이메일무단수집거부</a>
+            <a href="/#" target="_blank">정도경영 사이버 신문고</a>
+        </div>
+    </div>
+    <!-- // gnb -->    
+<!-- </div> -->
+
+<section style="height: 100vh"></section>
+<section style="background: #1a5050; height: 100vh"></section>
+
+<!-- Main Js -->
+<script src="./assets/main.js"></script>
+
+</body>
+</html>
