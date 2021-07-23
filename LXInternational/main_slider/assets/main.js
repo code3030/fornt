@@ -1,4 +1,6 @@
 ( () => {
+    const circle = document.querySelector('.circle');
+
     let yOffset = 0;
     let currentScene = 0;
     let enterNewScene = false;
@@ -124,20 +126,19 @@
         const sliderTxtPx = (80 / 0.8) * -scrollRatio;
         const sliderBoxPy = (100 / 0.8) * -scrollRatio;
         const sliderBoxPyB = (100 / 0.8) * scrollRatio;
+        const sliderBoxPyC = (40 / 0.8) * -scrollRatio;
+        const sliderBoxPyD = (20 / 0.8) * scrollRatio;
+        const sliderBoxPyE = (50 / 0.8) * -scrollRatio;
+        const sliderBoxPyF = (100 / 0.8) * scrollRatio * 0.2;
 
         sliderWrap.mainScrollCon.style.transform = `translate3d(${sliderPx}px, 0, 0)`;
 
         sliderWrap.mainSliderBox_A.style.transform = `translate3d(0, ${sliderBoxPy}%, 0)`;
         sliderWrap.mainSliderBox_B.style.transform = `translate3d(0, ${sliderBoxPyB}%, 0)`;
-        sliderWrap.mainSliderBox_C.style.transform = `translate3d(0, ${sliderBoxPy}%, 0)`;
-        sliderWrap.mainSliderBox_D.style.transform = `translate3d(0, ${sliderBoxPyB}%, 0)`;
-        sliderWrap.mainSliderBox_E.style.transform = `translate3d(0, ${sliderBoxPy}%, 0)`;
-        sliderWrap.mainSliderBox_F.style.transform = `translate3d(0, ${sliderBoxPyB}%, 0)`;
-        console.log(scrollRatio)
-
-        if (scrollRatio >= 0.22) {
-            
-        }
+        sliderWrap.mainSliderBox_C.style.transform = `translate3d(0, ${sliderBoxPyC}%, 0)`;
+        sliderWrap.mainSliderBox_D.style.transform = `translate3d(0, ${sliderBoxPyD}%, 0)`;
+        sliderWrap.mainSliderBox_E.style.transform = `translate3d(0, ${sliderBoxPyE}%, 0)`;
+        sliderWrap.mainSliderBox_F.style.transform = `translate3d(0, ${sliderBoxPyF}%, 0)`;
 
         sliderWrap.mainScrollTit_A.style.transform = `translate3d(${sliderTxtPx}px, 0, 0)`;
         sliderWrap.mainScrollTit_B.style.transform = `translate3d(${sliderTxtPx}px, 0, 0)`;
@@ -169,8 +170,36 @@
         })
     }
 
-    
+    function moveCircle(e) {
+        TweenLite.to(circle, 0.3, {
+            css: {
+                left: e.pageX,
+                top: e.pageY
+            }
+        });
+    }
 
+    let items = $('.items');
+
+    items.mouseenter(function(e) {
+        let mask = $(this).find('.mask');
+        let left =  $(this).offset().left;
+        let top =  $(this).offset().top;
+        let boxX_Pos = e.pageX - left;
+        let boxY_Pos = e.pageY - top;
+
+        $(mask).css('top', boxY_Pos);
+        $(mask).css('left', boxX_Pos);
+
+        $(mask).addClass('hover');
+    });
+
+    items.mouseleave(function() {
+        $('.items .mask').removeClass('hover');
+    })
+
+    $(window).on('mousemove', moveCircle);
+    
     window.addEventListener('resize', setLayout);
 
     window.addEventListener('load', () => {

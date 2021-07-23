@@ -102,6 +102,7 @@ section {
 }
 .main-section02 .items {
     position: relative;
+    transition: transform 0.2s cubic-bezier(0.1, 0.12, 0.12, 1.53) 0s;
 }
 .main-section02 .items+.items {
     margin-left: 170px;
@@ -147,10 +148,12 @@ section {
     top: -59.6842%;
 }
 .main-section02 .item05 {
-    top: 79.6842%;
+    /* top: 79.6842%; */
+    top: 49.6842%;
 }
 .main-section02 .item06 {
-    top: -99.6842%;
+    /* top: -99.6842%; */
+    top: -59.6842%;
 }
 .main-section02 .items .img {
     display: inline-block;
@@ -183,6 +186,24 @@ section {
     transform: translateX(60px);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+.main-section02 .items:nth-of-type(1) a:after {
+    content: "About us";
+}
+.main-section02 .items:nth-of-type(2) a:after {
+    content: "IR\AInformation";
+}
+.main-section02 .items:nth-of-type(3) a:after {
+    content: "Business\A Area";
+}
+.main-section02 .items:nth-of-type(4) a:after {
+    content: "Recruit\AInformation";
+}
+.main-section02 .items:nth-of-type(5) a:after {
+    content: "LXI\ANews room";
+}
+.main-section02 .items:nth-of-type(6) a:after {
+    content: "Contact\AUs";
+}
 .main-section02 .items .img img {
     position: absolute;
     top: 0;
@@ -201,6 +222,11 @@ section {
     border-radius: 50%;
     transform: scale(0);
 }
+.main-section02 .items .img .mask.hover {
+    transform: scale(110);
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
 .main-section02 .items .desc {
     position: absolute;
     bottom: 35px;
@@ -212,102 +238,34 @@ section {
     transform: translateX(10px);
     transition: all 0.3s ease-in-out;
     font-size: 18px;
-    font-weight
+}
+.main-section02 .items:hover .tit {
+    color: #fff;
+    right: 30px;
+    opacity: 0;
+}
+.main-section02 .items:hover .desc {
+    transform: translateX(0);
+    opacity: 1;
+}
+.main-section02 .items:hover a:after {
+    transform: translateX(0);
+    opacity: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* cursor */
+.circle{
+    position: absolute;
+    left: -13px;
+    top: -13px;
+    transform: translate(-50%,-50%);
+    width: 26px; 
+    height: 26px; 
+    /* pointer-events: none;  */
+    z-index: 1; 
+    border: 1px solid rgba(0,0,0,.2); 
+    border-radius:50%; 
+    color: #fff; 
+    pointer-events: none;
+    transition: width 0.5s cubic-bezier(0.02, 0.02, 0.35, 1.08),height 0.5s cubic-bezier(0.02, 0.02, 0.35, 1.08);
+}
