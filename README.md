@@ -7,4 +7,5 @@
 >> #### https://carriermall.co.kr/page/index?tpl=etc%2FcarrierMicro.html
 ### • vertical menu
 > #### 메뉴바에 햄버거 클릭 시 전체 메뉴 슬라이드로 펼쳐짐
+> #### 페이지 횡스크롤 슬라이드 
 >> #### http://www.lxinternational.com/
