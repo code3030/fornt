@@ -158,17 +158,17 @@
                         </h3>
                         <div class="history_tab">
                             <div class="fixedTab">
-                              <button type="button" class="btn_y on" data-idx="0">2006</button><span class="line"></span>
-                              <button type="button" class="btn_y" data-idx="1">1994</button><span class="line"></span>
-                              <button type="button" class="btn_y" data-idx="2">1983</button><span class="line"></span>
-                              <button type="button" class="btn_y" data-idx="3">1969</button><span class="line"></span>
-                              <button type="button" class="btn_y" data-idx="4">1953</button>
+                              <button type="button" class="tablinks on" onclick="openTab(event, 'tab1')">2006</button><span class="line"></span>
+                              <button type="button" class="tablinks" onclick="openTab(event, 'tab2')">1994</button><span class="line"></span>
+                              <button type="button" class="tablinks" onclick="openTab(event, 'tab3')">1983</button><span class="line"></span>
+                              <button type="button" class="tablinks" onclick="openTab(event, 'tab4')">1969</button><span class="line"></span>
+                              <button type="button" class="tablinks" onclick="openTab(event, 'tab5')">1953</button>
                             </div>
                           </div>
 
                           <div class="history-wrap show">
                             <!-- 2007 ~ 현재 -->
-                            <div class="history-group history05 current" data-idx="5">
+                            <div id="tab1" class="history-group history05 current" data-idx="5">
                               <p class="history-tit">
                                 <strong>2007 ~ <i>현재</i></strong>
                                 <span>새로운 비지니스 모델 개발</span>
@@ -459,7 +459,7 @@
                             </div>
             
                             <!-- 1995 ~ 2006 -->
-                            <div class="history-group history04" data-idx="4">
+                            <div id="tab2" class="history-group history04" data-idx="4">
                               <p class="history-tit">
                                 <strong>1995 ~ 2006</strong>
                                 <span><b>LG</b>상사의 출항</span>
@@ -668,7 +668,7 @@
                             </div>
             
                             <!-- 1984 ~ 1994 -->
-                            <div class="history-group history03" data-idx="3">
+                            <div id="tab3" class="history-group history03" data-idx="3">
                               <p class="history-tit">
                                 <strong>1984 ~ 1994</strong>
                                 <span>상사 기능의 확대</span>
@@ -878,7 +878,7 @@
                             </div>
                             
                             <!-- 1970 ~ 1983 -->
-                            <div class="history-group history02" data-idx="2">
+                            <div id="tab4" class="history-group history02" data-idx="2">
                               <p class="history-tit">
                                 <strong>1970 ~ 1983</strong>
                                 <span>종합상사 인가 획득</span>
@@ -1069,7 +1069,7 @@
                             </div>
                             
                             <!-- 1953 ~ 1969 -->
-                            <div class="history-group history01" data-idx="1">
+                            <div id="tab5" class="history-group history01" data-idx="1">
                               <p class="history-tit">
                                 <strong>1953 ~ 1969</strong>
                                 <span>락희산업주식회사의 설립</span>

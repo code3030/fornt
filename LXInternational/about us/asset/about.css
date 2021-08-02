@@ -324,8 +324,11 @@
     opacity: 1;
     transform: translateY(0);
 }
+#section02 {
+    padding-bottom: 250px;
+}
 #section03 {
-    padding-top: 350px;
+    padding-top: 100px;
 }
 #section03.show i {
     transform: translateY(0%);
@@ -463,6 +466,7 @@
     left: 0;
     width: 100%;
     opacity: 0;
+    transition: opacity ease 0.35s;
 }
 .history-group.current {
     position: relative;

@@ -35,7 +35,7 @@
                 navHover: document.querySelector('.navHover:nth-child(3)'),
                 aboutSecTit: document.querySelector('#section03 .about-sec-tit'),
                 fixedTab: document.querySelector('.fixedTab'),
-                flowText: document.querySelector('.flowText span'),
+                flowText: document.querySelectorAll('.flowText span'),
             }
         },
     ]
@@ -96,9 +96,6 @@
                 if (scrollRatio > 0.6) {
                     // 1
                     sceneInfo[1].objs.greetingInner.classList.add('fadeAni');
-                }else{
-                    // 1
-                    sceneInfo[1].objs.greetingInner.classList.remove('fadeAni');
                 }
 
                 if (scrollRatio > 0.8) {
@@ -128,11 +125,20 @@
                 break;
                 
             case 1:
+                // 1
+                sceneInfo[0].objs.navHover.classList.remove('on');
+                sceneInfo[1].objs.navHover.classList.add('on');
+
+                sceneInfo[1].objs.navHover.classList.add('on');
+                sceneInfo[1].objs.aboutSecTit.classList.add('show');
+                sceneInfo[1].objs.imgCeo.classList.add('show');
+                sceneInfo[1].objs.greetingBottom.classList.add('show');
+                
                 if (scrollRatio > 0.2) {
                     objs.imgCeo.classList.remove('show');
                 }
 
-                if (scrollRatio > 0.9) {
+                if (scrollRatio > 0.8) {
                     // 1
                     objs.aboutSecTit.classList.remove('show');
                     objs.navHover.classList.remove('on');
@@ -154,8 +160,30 @@
                 break;
 
             case 2:
+                sceneInfo[1].objs.greetingBottom.classList.add('show');
+                sceneInfo[1].objs.greetingInner.classList.add('fadeAni');
+                sceneInfo[1].objs.navHover.classList.remove('on');
+
+                sceneInfo[0].objs.navHover.classList.remove('on');
+                
+                sceneInfo[2].objs.navHover.classList.add('on');
+
+                sceneInfo[2].objs.navHover.classList.add('on');
+                sceneInfo[2].objs.aboutSecTit.classList.add('show');
+                sceneInfo[2].objs.fixedTab.classList.add('show');
+
                 if (scrollRatio > 0.01) {
-                    sceneInfo[2].objs.flowText.style.left = `${leftPos}%`;
+
+                    let posText = sceneInfo[2].objs.flowText;
+                    let posTexts = new Array();
+
+                    for (let i = 0; i < posText.length; i++) {
+                        posTexts.push(posText[i]);
+
+                        for (let a = 0; a < posTexts.length; a ++) {
+                            posTexts[a].style.left = `${leftPos}%`;     
+                        }
+                    }
                 }
 
                 break;
@@ -167,33 +195,46 @@
         for (let i = 0; i < currentScene; i++) {
             prevScrollHeight += sceneInfo[i].scrollHeight;
         }
-        
         playAnimation();
     };
 
     window.addEventListener('load', function() {
-        setLayout()
-    });
-
-    window.addEventListener('resize', function() {
         setLayout();
     });
-
-    window.addEventListener('click', function() {
-        let yearTab = document.querySelector(".history_tab .fixedTab");
-        let year = yearTab.querySelectorAll(".btn_y");
-        let clickIdx = year.length - this.getAttribute("data-idx");
-        let currentTab = document.querySelector(".current");
-        let currentIdx = currentTab.getAttribute("data-idx");
-
-        console.log(currentIdx)
+    
+    window.addEventListener('resize', function() {
+        setLayout();
+        scrollLoop();
     });
 
     window.addEventListener('scroll', function() {
         yOffset = window.pageYOffset;
 
-        setLayout()
-        scrollLoop()
+        setLayout();
+        scrollLoop();
     });
-
 })();
+
+// let tabMove = $("#section03").offset();
+let tabMove = document.querySelector('#section03');
+
+function openTab(evt, tabName) {
+    let i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("history-group");
+
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.opacity = "0";
+        tabcontent[i].classList.remove('current');
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" on", "");
+    }
+    
+    document.getElementById(tabName).style.opacity = "1";
+    document.getElementById(tabName).classList.add('current');
+    evt.currentTarget.className += " on";
+}
