@@ -1,0 +1,244 @@
+@media (max-width: 1024px) {
+    :root {
+        --gutter: 8.3333vw;
+        --column-width: calc(100% - (var(--gutter) * 2));
+        --font8: 2.2222vw;
+        --font9: 2.5vw;
+        --font10: 2.7777vw;
+        --font12: 3.3333vw;
+        --font14: 3.8888vw;
+        --font15: 4.1666vw;
+        --font16: 4.4444vw;
+        --font18: 5vw;
+        --font20: 5.5555vw;
+        --font24: 6.6666vw;
+        --font30: 8.3333vw;
+        --font36: 10vw;
+        --font40: 11.1111vw;
+        --font72: 6.6666vw;
+        --font80: 11.1111vw;
+        --gap15: 4.1666vw;
+        --gap20: 5.5555vw;
+        --gap40: 11.1111vw;
+        --gap60: 16.6666vw;
+        --gap100: 27.7777vw;
+        --gap120: 33.3333vw;
+    }
+    :root {
+        --black-01: #1b1b1b;
+        --black-02: #808080;
+        --black-03: #bcbcbc;
+        --black-04: #ededed;
+        --primary-red: #d2074a;
+        --secondary-gray-01: #434655;
+        --secondary-gray-02: #bcbdc5;
+        --secondary-gray-03: #ebebf0;
+        --blue: #1e8df9;
+        --gray: #a1a1a1;
+    }
+    body {
+        font-size: var(--font10);
+    }
+
+    .global {
+        padding-bottom: 0;
+        background: #fafafa;
+    }
+    .contents {
+        position: relative;
+        padding-top: 34.1666vw;
+    }
+    .layout-grid-inner {
+        position: relative;
+        margin: 0 var(--gutter);
+    }
+    .location {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: -16.9443vw;
+        left: 0;
+        width: 100%;
+        font-size: var(--font12);
+        z-index: 10;
+    }
+    .global .page-title-box {
+        position: relative;
+        z-index: 1;
+    }
+    .page-title-box {
+        margin-top: 3.0555vw;
+    }
+    .page-title-box .page-title {
+        font-size: var(--font30);
+        font-weight: 600;
+        font-family: 'calibre';
+        line-height: 1;
+        color: #2f3139;
+        opacity: 1;
+    }
+    .page-title-box .page-title .letter {
+        display: inline-block;
+        opacity: 1;
+        margin-right: -9px;
+        font-weight: bold;
+    }
+    .page-title-box .page-title .letter:nth-child(6) {
+        padding-right: 10px;
+    }
+    .page-title-box .page-title-desc {
+        display: block;
+        margin-top: 2.2222vw;
+        font-size: var(--font12);
+        line-height: 1;
+        letter-spacing: 0.8333vw;
+        color: var(--black-01);
+    }
+
+
+    .overseas-branch {
+        display: none;
+    }
+    .guide-icons {
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 5.5555vw;
+        left: 8.3333vw;
+        width: calc(100% - (8.3333vw * 2));
+        padding: 2.7777vw 0;
+        border: solid 1px #e5e5e5;
+        border-radius: 5.5555vw;
+        background: #fff;
+        opacity: 0;
+        transition: opacity 1s ease;
+        z-index: 1;
+    }
+    .guide-icons span {
+        display: inline-flex;
+        align-items: center;
+        font-size: var(--font10);
+    }
+    .ico-branch01 {
+        display: inline-block;
+        width: 4.4444vw;
+        height: 4.16666vw;
+        margin-right: 2.7777vw;
+        background: url('../img/ico-branch01.png') no-repeat top left / cover;
+        font-size: 0;
+    }
+    .ico-branch02 {
+        display: inline-block;
+        width: 2.7777vw;
+        height: 2.7777vw;
+        margin-right: 2.7777vw;
+        background: url('../img/ico-branch02.png') no-repeat top left / cover;
+        font-size: 0;
+    }
+    .ico-branch03 {
+        display: inline-block;
+        width: 2.5vw;
+        height: 4.72222vw;
+        margin-right: 2.7777vw;
+        background: url('../img/ico-branch03.png') no-repeat top left / cover;
+        font-size: 0;
+    }
+    .ico-branch04 {
+        display: inline-block;
+        width: 3.6111vw;
+        height: 3.6111vw;
+        margin-right: 2.7777vw;
+        background: url('../img/ico-branch04.png') no-repeat top left / cover;
+        font-size: 0;
+    }
+    .selectArea {
+        margin: 34.4444vw 8.3333vw 25vw;
+        border-top: 1px solid var(--black-01);
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+    .selectArea:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 55.166vw;
+        left: 0;
+        width: 100%;
+        height: 23.5555vw;
+        background: url('../img/world-map.png') no-repeat center top / contain;
+        z-index: 0;
+    }
+    .selectArea>li {
+        border-bottom: 1px solid #d3d3d3;
+    }
+    .selectArea>li button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 13.8888vw;
+        padding-right: 15.2777vw;
+        font-size: var(--font18);
+        font-family: 'calibre';
+        font-weight: 600;
+        color: var(--black-01);
+        transition: all 0.3s ease;
+    }
+    .selectArea>li button:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5vw;
+        right: 4.1666vw;
+        width: 2.2222vw;
+        height: 2.2222vw;
+        border: solid var(--black-01);
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg);
+    }
+    .branchList {
+        display: none;
+    }
+    .selectArea>li .on {
+        color: var(--primary-red);
+    }
+    .selectArea>li .on:before {
+        top: 6.3888vw;
+        transform: rotate(-135deg);
+    }
+    .branchInfo {
+        border-top: 1px solid #d3d3d3;
+    }
+    .branchInfo .country {
+        margin-top: 5.5555vw;
+        font-family: 'calibre';
+        font-weight: 600;
+        font-size: var(--font15);
+        color: var(--black-01);
+        line-height: 1;
+        text-align: right;
+    }
+    .branchInfo ul {
+        padding: 5.5555vw 0;
+        overflow-y: auto;
+    }
+    .branchInfo h4 {
+        display: flex;
+        align-items: center;
+    }
+    .branchInfo .tel {
+        margin-top: 10px;
+        font-size: var(--font13);
+        color: #808080;
+    }
+    .branchInfo .tel span {
+        display: inline-block;
+        margin-right: 10px;
+        font-weight: 700;
+        line-height: 1;
+    }
+    .branchInfo li+li {
+        margin-top: 5.5555vw;
+    }
+}

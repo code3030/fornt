@@ -1,0 +1,265 @@
+@media (min-width: 1025px) {
+
+    .overseas-branch {
+        position: relative;
+        margin-top: 40px;
+    }
+    .location {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 5px;
+        font-size: 13px;
+        z-index: 1;
+        opacity: 1;
+    }
+    .page-title-box .page-title .letter {
+        display: inline-block;
+        opacity: 1;
+        margin-right: -20px;
+    }
+    .page-title-box .page-title .letter:nth-child(6) {
+        padding-right: 20px;
+    }
+    .guide-icons {
+        display: flex;
+        flex-wrap: wrap;
+        width: 228px;
+        margin: 10px 0 0 20px;
+        padding: 20px 30px;
+        border: solid 1px #e5e5e5;
+        background: #fff;
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
+    .guide-icons span {
+        display: inline-flex;
+        align-items: center;
+        width: 50%;
+        font-size: 13px;
+    }
+    .ico-branch01 {
+        display: inline-block;
+        width: 16px;
+        height: 15px;
+        margin-right: 10px;
+        background: url('../img/ico-branch01.png') no-repeat top left / contain;
+        font-size: 0;
+    }
+    .ico-branch02 {
+        display: inline-block;
+        width: 16px;
+        height: 10px;
+        margin-right: 10px;
+        background: url('../img/ico-branch02.png') no-repeat top left / contain;
+        font-size: 0;
+    }
+    .ico-branch03 {
+        display: inline-block;
+        width: 16px;
+        height: 17px;
+        margin-right: 10px;
+        background: url('../img/ico-branch03.png') no-repeat top center / contain;
+        font-size: 0;
+    }
+    .ico-branch04 {
+        display: inline-block;
+        width: 16px;
+        height: 13px;
+        margin-right: 10px;
+        background: url('../img/ico-branch04.png') no-repeat top left / contain;
+        font-size: 0;
+    }
+    .page-title-box {
+        margin-top: 16px;
+    }
+    .page-title-box .page-title {
+        display: block;
+        font-size: 72px;
+        font-weight: 700;
+        font-family: 'calibre';
+        line-height: 1;
+        color: #2f3139;
+        opacity: 1;
+    }
+    .page-title-box .page-title-desc {
+        display: block;
+        margin-top: 13px;
+        font-size: 18px;
+        line-height: 1;
+        color: #1b1b1b;
+        opacity: 0.6;
+    }
+    .overseas-branch .worldmap {
+        text-align: center;
+        transform: translateY(10px);
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .overseas-branch .worldmap img {
+        width: 100%;
+    }
+    .overseas-branch .branch {
+        position: absolute;
+        width: 1.79%;
+    }
+    .overseas-branch .branch svg {
+        width: 100%;
+        height: 28px;
+    }
+    .overseas-branch .branch svg path {
+        transition: all 0.5s ease;
+    }
+    .overseas-branch .korea{top:27.63%; left:40.89%;}
+    .overseas-branch .china{top:31.14%; left:38.44%;}
+    .overseas-branch .hongkong{top:38.15%; left:37.54%;}
+    .overseas-branch .taiwan{top:36.84%; left:39.78%;}
+    .overseas-branch .japan{top:28.289%; left:44.35%;}
+    .overseas-branch .singapore{top:53.07%; left:35.125%;}
+    .overseas-branch .indonesia{top:52.19%; left:38.26%;}
+    .overseas-branch .myanmar{top:37.28%; left:32.258%;}
+    .overseas-branch .thailand{top:42.105%; left:34.318%;}
+    .overseas-branch .vietnam{top:44.298%; left:36.469%;}
+    .overseas-branch .india{top:43.859%; left:28.76%;}
+    .overseas-branch .germany{top:18.2%; left:11.917%;}
+    .overseas-branch .kazakhstan{top:19.517%; left:22.939%;}
+    .overseas-branch .russia{top:17.105%; left:33.5125%;}
+    .overseas-branch .turkmenistan{top:26.096%; left:23.4767%;}
+    .overseas-branch .turkey{top:26.97%; left:17.74%;}
+    .overseas-branch .poland{top:17.105%; left:13.978%;}
+    .overseas-branch .arab{top:35.087%; left:22.58%;}
+    .overseas-branch .oman{top:40.1315%; left:23.7455%;}
+    .overseas-branch .unitesStates{top:29.16%; left:72.491%;}
+    .overseas-branch .argentina{top:78.508%; left:85.66%;}
+    .overseas-branch .australia{top:70.175%; left:45.34%;}
+    
+    .selectArea {
+        display: flex;
+        margin-top: 20px;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+    .selectArea > li {
+        width: 20%;
+    }
+    .selectArea>li .on {
+        position: relative;
+        box-shadow: 8px -6px 61px 0 rgb(0 0 0 / 11%);
+        z-index: 1;
+        color: #d2074a;
+    }
+    .selectArea > li button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 96px;
+        padding: 0 30px 0 40px;
+        border: solid #ededed;
+        border-width: 1px 0 1px 1px;
+        font-size: 24px;
+        font-family: 'calibre';
+        font-weight: 600;
+        color: #bcbdc5;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+    .branchList {
+        display: none;
+    }
+    .branchInfo {
+        display: none;
+        position: absolute;
+        width: 24.6%;
+        border-radius: 10px;
+        box-shadow: -5px 10px 20px 0 rgb(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+    .branchInfo .country {
+        padding: 9.17% 9.17% 0 9.17%;
+        font-family: 'calibre';
+        font-weight: 600;
+        font-size: 2vw;
+        color: #d2074a;
+        line-height: 1;
+    }
+    .branchInfo ul {
+        max-height: 20vw;
+        padding: 9.17%;
+        overflow-y: auto;
+    }
+    .branchInfo h4 {
+        display: flex;
+        align-items: center;
+        font-size: 0.88vw;
+    }
+    .branchInfo .tel {
+        margin-top: 10px;
+        font-size: 0.77vw;
+        color: #808080;
+    }
+    .branchInfo .tel span {
+        display: inline-block;
+        margin-right: 10px;
+        font-weight: 700;
+        line-height: 1;
+    }
+    .branchInfo#korea{top:17.63%; left:43.59%;}
+    .branchInfo#china{top:21.14%; left:44.44%;}
+    .branchInfo#hongkong{ top:28.15%; left:40.54%;}
+    .branchInfo#taiwan{top:26.84%; left:42.78%;}
+    .branchInfo#japan{top:18.289%; left:47.35%;}
+    .branchInfo#singapore{top:43.07%; left:38.125%;}
+    .branchInfo#indonesia{top:42.19%; left:41.26%;}
+    .branchInfo#myanmar{top:27.28%; left:35.258%;}
+    .branchInfo#thailand{top:32.105%; left:37.318%;}
+    .branchInfo#vietnam{top:34.298%; left:39.469%;}
+    .branchInfo#india{top:33.859%; left:31.76%;}
+    
+    .branchInfo#germany{top:8.2%; left:14.917%;}
+    .branchInfo#kazakhstan{top:9.517%; left:25.939%;}
+    .branchInfo#russia{top:7.105%; left:36.5125%;}
+    .branchInfo#turkmenistan{top:16.096%; left:26.4767%;}
+    .branchInfo#turkey{top:16.97%; left:20.74%;}
+    .branchInfo#poland{top:7.105%; left:20.978%;}
+    
+    .branchInfo#arab{top:25.087%; left:25.58%;}
+    .branchInfo#oman{top:30.1315%; left:26.7455%;}
+    
+    .branchInfo#unitesStates{top:19.16%; left:75.491%;}
+    .branchInfo#argentina{top:68.508%; left:88.66%;}
+    
+    .branchInfo#australia{top:60.175%; left:48.34%;}
+}
+
+.contents {
+    padding: 208px 0;
+}
+.global {
+    background-color: #fafafa;
+}
+.layout-grid-inner {
+    position: relative;
+    margin: 0 calc(((100% - (20px * (12 - 1))) / 12) + 20px);
+}
+.location .path {
+    color: #808080;
+    line-height: 1;
+}
+.location .path:after {
+    content: "-";
+    display: inline-block;
+    margin: 0 5px;
+}
+.location .subdepth {
+    position: relative;
+}
+.location .subdepth li {
+    line-height: 1;
+}
+.location .subdepth li:not(.on) {
+    display: none;
+}
+
+
+
