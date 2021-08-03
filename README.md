@@ -14,3 +14,5 @@
 > #### 4. goble network
 > ##### 지도 위의 마크 클릭 시 이벤트 및 아래 메뉴 클릭 시 지도 마커 불표시
 > ##### 사이트: http://www.lxinternational.com/
+### • jquery anima
+> #### 사용 예제, min.js 추가
