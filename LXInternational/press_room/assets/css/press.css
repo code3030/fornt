@@ -1,0 +1,274 @@
+@media (min-width: 1025px) {
+    .mt-200 {
+        margin-top: 200px !important;
+    }
+    
+    .contents {
+        padding-top: 208px;
+        padding-right: 80px;
+        padding-bottom: 100px;
+    }
+    .layout-grid-inner {
+        position: relative;
+        margin: 0 calc(((100% - (20px * (12 - 1))) / 12) + 20px);
+    }
+    .card-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card-list li:nth-child(-n+4) {
+        margin-top: 0;
+    }
+    .card-list li:nth-of-type(4n+1) {
+        margin-left: 0;
+    }
+    .card-list li:before {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+    .card-list li {
+        position: relative;
+        width: calc((100% - 60px) / 4);
+        margin-top: 20px;
+        margin-left: 20px;
+        border: 1px solid #ededed;
+        opacity: 0;
+    }
+    .card-list li:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease;
+    }
+    .card-list li:not(.empty):hover {
+        border: 0;
+    }
+    card-list li:not(.empty):hover .info {
+        border-color: #fff;
+    }
+    .card-list li:not(.empty):hover .info .date {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .card-list li:not(.empty):hover .info .tit {
+        transform: translateY(0);
+        color: #fff;
+    }
+    .card-list.type2 li:not(.empty):hover .info .desc {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .card-list.type2 li:not(.empty):hover .info .date:after {
+        opacity: 1;
+    }
+    .card-list li:not(.empty):hover .info:after {
+        animation: line 700ms ease 0ms alternate infinite;
+    }
+    .card-list.type2 li:not(.empty):hover:after {
+        box-shadow: 0 20px 15px 0 rgb(0,0,0, 0.2);
+    }
+    .card-list li a {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .card-list .pic {
+        height: 100%;
+    }
+    .card-list .pic img {
+        width: 100%;
+        height: 100%;
+        filter: grayscale(100%);
+    }
+    .card-list .pic:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.95);
+    }
+    .card-list .info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border: 3px solid transparent;
+        overflow: hidden;
+    }
+    .card-list.type2 .info:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #d2074a;
+        transition: transform 0.3s ease;
+        transform: scale(0);
+    }
+    .card-list .info .date {
+        display: inline-block;
+        position: relative;
+        font-family: 'calibre';
+        font-weight: 600;
+        color: #FA648B;
+        opacity: 0;
+        transition: all 0.4s ease;
+        transform: translateY(-5px);
+    }
+    .card-list.type2 .info .date:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        transform-origin: left center;
+        transform: scaleX(1);
+        background: #FA648B;
+        transition: opacity 0.4s ease;
+        opacity: 0;
+    }
+    .card-list .info .tit {
+        position: relative;
+        margin-top: 15px;
+        font-size: 18px;
+        color: #1b1b1b;
+        transition: all 0.3s ease;
+        transform: translateY(-2em);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.5em;
+        max-height: 3em;
+        word-break: break-all;
+    }
+    .card-list.type2 .info .desc {
+        position: relative;
+        margin-top: 20px;
+        font-size: 13px;
+        color: #fff;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.5em;
+        height: 4.5em;
+        word-break: break-all;
+        transform: translateY(15px);
+        transition: all 0.5s ease;
+        opacity: 0;
+    }
+    .card-list .info:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 50px;
+        height: 2px;
+        transform-origin: left center;
+        transform: scaleX(0);
+        background: #fff;
+        transition: transform 0.4s ease;
+    }
+
+    .bottom-buttonBox {
+        margin-top: 60px;
+    }
+    .bottom-buttonBox.center {
+        text-align: center;
+    }
+    .button-underline {
+        display: inline-block;
+        position: relative;
+        padding: 15px 0;
+        border-bottom: 1px solid #1b1b1b;
+        font-weight: 600;
+        color: #1b1b1b;
+        font-size: 15px;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        line-height: 1;
+    }
+    .button-underline:before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background: #1b1b1b;
+        transition: height 0.3s ease;
+        z-index: -1;
+    }
+    .button-underline:hover {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 15px;
+        color: #fff;
+    }
+    .button-underline:hover:before {
+        height: 100%;
+    }
+
+    .card-list.type2 .info:before{content:""; display:block; position:absolute; top:0; left:0; width:100%; height:100%; background:#d2074a; transition:transform 0.3s ease; transform:scale(0);}
+    .card-list.type2 .in-left .info:before{animation: in-left 300ms ease 0ms 1 forwards;transform-origin:left center; }
+    .card-list.type2 .out-left .info:before{animation: out-left 300ms ease 0ms 1 forwards;transform-origin:left center; }
+    .card-list.type2 .in-right .info:before{animation: in-right 300ms ease 0ms 1 forwards;transform-origin:right center;}
+    .card-list.type2 .out-right .info:before{animation: out-right 300ms ease 0ms 1 forwards;transform-origin:right center;}
+    .card-list.type2 .in-top .info:before{animation: in-top 300ms ease 0ms 1 forwards;transform-origin:top center;}
+    .card-list.type2 .out-top .info:before{animation: out-top 300ms ease 0ms 1 forwards;transform-origin:top center;}
+    .card-list.type2 .in-bottom .info:before{animation: in-bottom 300ms ease 0ms 1 forwards;transform-origin:bottom center; }
+    .card-list.type2 .out-bottom .info:before{animation: out-bottom 300ms ease 0ms 1 forwards;transform-origin:bottom center;}
+
+    @keyframes line {
+    from {transform:scaleX(0);}
+    to   {transform:scaleX(1);}}
+    @keyframes in-top {
+    from {transform:scaleY(0);}
+    to   {transform:scaleY(1);}}
+    @keyframes in-right {
+    from {transform:scaleX(0);}
+    to   {transform:scaleX(1);}}
+    @keyframes in-bottom {
+    from {transform:scaleY(0);}
+    to   {transform:scaleY(1);}}
+    @keyframes in-left {
+    from {transform:scaleX(0);}
+    to   {transform:scaleX(1);}}
+
+    @keyframes out-top {
+    from {transform:scaleY(1);}
+    to   {transform:scaleY(0);}}
+    @keyframes out-right {
+    from { transform:scaleX(1);}
+    to   {transform:scaleX(0);}}
+    @keyframes out-bottom {
+    from {transform:scaleY(1);}
+    to   {transform:scaleY(0);}}
+    @keyframes out-left {
+    from {transform:scaleX(1);}
+    to   {transform:scaleX(0);}}
+
+}
+
+

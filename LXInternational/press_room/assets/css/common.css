@@ -1,0 +1,56 @@
+:root{
+    --black-01:#1b1b1b;
+    --black-02:#808080;
+    --black-03:#bcbcbc;
+    --black-04:#ededed;
+    --primary-red:#d2074a;
+    --secondary-gray-01:#434655;
+    --secondary-gray-02:#bcbdc5;
+    --secondary-gray-03:#ebebf0;
+    --blue:#1e8df9;
+    --gray:#a1a1a1;
+  }
+  
+  *, *:before, *:after {margin:0; padding:0; -webkit-tap-highlight-color:rgba(0,0,0,0);box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+  fieldset{border:0 none}
+  img{border:0 none; vertical-align: top;}
+  dl,ul,ol,menu,li{list-style:none}
+  blockquote,q{quotes:none}
+  blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+  i{font-style: normal;}
+  input,select,textarea{font-size:100%;vertical-align:middle;font-family:'Noto Sans KR', sans-serif;}
+  button{font-size:100%;vertical-align:middle; cursor:pointer;border:0 none;background-color:transparent;outline:none; text-align:left; font-family:'Noto Sans KR', sans-serif;}
+  table{width:100%;border-collapse:collapse;border-spacing:0;table-layout: fixed;}
+  table caption{width:0; height:0; font-size:0; line-height: 0; opacity:0;}
+  textarea{resize:none;}
+  input{border:0; border-radius:0; outline:none; -webkit-appearance:none; -webkit-border-radius:0;}
+  select{-webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; outline: none;}
+  select::-ms-expand {
+    display: none;
+  }
+  
+  a, a:active, a:hover{text-decoration:none;}
+  address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+  
+  body{font-family:'Noto Sans KR', sans-serif; font-size: 15px; line-height: 1.7; color:#1b1b1b; word-break: keep-all;}
+  
+  .cf:after{content:""; display:block; clear: both;}
+  
+  .hidden{position:absolute; top:0; left:0; width:0; height:0; font-size:0; opacity:0; text-indent:-999999px;}
+  
+  .ellipsis{text-overflow:ellipsis; white-space:nowrap; word-wrap:normal; overflow:hidden;}
+  
+  .calibre{font-family: 'calibre';}
+  
+  .nanum{font-family: 'nanumSquare';}
+
+button {
+    font-size: 100%;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0 none;
+    background-color: transparent;
+    outline: none;
+    text-align: left;
+    font-family: 'Noto Sans KR', sans-serif;
+}
